@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package pic.v1;
+
+option go_package = "Week04/api/pic/v1;v1";
+
+service Pic {
+    rpc GetPicInfoById (GetPicInfoByIdRequest) returns (GetPicInfoByIdResponse) {}
+}
+
+message GetPicInfoByIdRequest {
+    int32 id = 1;
+}
+
+message GetPicInfoByIdResponse {
+    int32 id = 1;
+    string name = 2;
+    string url = 3;
+}
